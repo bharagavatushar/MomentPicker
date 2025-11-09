@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MomentPicker — Inline</title>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <script src="../dist/momentpicker.js"></script>
+    <style>
+      .container { margin: 24px; }
+      .sink { margin-top: 10px; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="inline-host"></div>
+      <div class="sink">Selected: <span id="out"></span></div>
+    </div>
+    <script>
+      const out = document.getElementById('out');
+      new window.MomentPicker('#inline-host', {
+        inline: true,
+        includeTime: true,
+        use12h: true,
+        minuteStep: 15,
+        showApply: true,
+        onChange(m) { out.textContent = m ? m.format('YYYY-MM-DD hh:mm A') : ''; }
+      });
+    </script>
+  </body>
+</html>

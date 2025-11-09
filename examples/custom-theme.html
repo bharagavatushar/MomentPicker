@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MomentPicker — Custom Theme</title>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <script src="../dist/momentpicker.js"></script>
+    <style>
+      .my-theme {
+        --mc-primary: #ff6a44;
+        --mc-primary-contrast: #0f1115;
+        --mc-bg: #121212;
+        --mc-fg: #fafafa;
+        --mc-border: #1f1f1f;
+        --mc-hover: #171717;
+        --mc-shadow: 0 14px 36px rgba(0,0,0,.6);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Pick launch date</button>
+    <script>
+      new window.MomentPicker('#btn', {
+        theme: 'my-theme',
+        includeTime: true,
+        showApply: true,
+        use12h: true
+      });
+    </script>
+  </body>
+</html>

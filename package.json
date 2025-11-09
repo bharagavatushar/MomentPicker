@@ -1,0 +1,55 @@
+{
+  "name": "momentpicker-modern-material",
+  "version": "0.1.0",
+  "description": "MomentPicker \u2014 Modern Material Edition: a compact date/time picker for Moment.js (vanilla JS with optional jQuery bridge).",
+  "keywords": [
+    "datepicker",
+    "timepicker",
+    "calendar",
+    "moment",
+    "moment.js",
+    "vanilla-js",
+    "material"
+  ],
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./esm/momentpicker.js",
+      "require": "./dist/momentpicker.min.js",
+      "default": "./dist/momentpicker.min.js"
+    }
+  },
+  "main": "dist/momentpicker.min.js",
+  "module": "esm/momentpicker.js",
+  "unpkg": "dist/momentpicker.min.js",
+  "jsdelivr": "dist/momentpicker.min.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/*",
+    "esm/*",
+    "types/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": true,
+  "peerDependencies": {
+    "moment": ">=2.29.0 <3"
+  },
+  "peerDependenciesMeta": {
+    "moment": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "terser": "^5.31.0"
+  },
+  "scripts": {
+    "build": "terser src/momentpicker.js -o dist/momentpicker.min.js --compress --mangle --comments \"/^!/\" && node -e \"require('fs').copyFileSync('src/momentpicker.js','dist/momentpicker.js')\"",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
