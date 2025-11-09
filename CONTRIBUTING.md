@@ -1,23 +1,11 @@
 # Contributing
 
-Thanks for helping improve MomentPicker!
+This project is distributed as a single, standalone browser script.
 
-## Development
-1. Fork and clone this repo.
-2. `npm i`
-3. Make changes in `src/momentpicker.js`.
-4. `npm run build` to produce `dist/momentpicker.min.js`.
-5. Open files in `examples/` to test locally.
+## Workflow
+- Edit `momentpicker.js` directly.
+- Open the HTML files in `examples/` to test in a browser.
+- Please keep the public API stable.
 
-## Coding notes
-- Keep the picker single-file and browser-first.
-- No external runtime deps beyond Moment (optional, auto-loaded).
-- Avoid breaking the public API without a major version bump.
-
-## Commit style
-- Use clear, conventional messages (e.g., `fix:`, `feat:`, `docs:`).
-- Link an issue when applicable.
-
-## Pull requests
-- Add a brief description and screenshots/gifs where UI changes occur.
-- Update README if behavior or options change.
+## Issues & PRs
+- Provide a clear description and screenshots/gifs for UI changes.

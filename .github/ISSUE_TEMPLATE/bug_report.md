@@ -16,7 +16,6 @@ What you expected to happen.
 
 **Environment**
 - Browser/version:
-- MomentPicker version:
 
 **Additional context**
 Screenshots, logs, etc.
