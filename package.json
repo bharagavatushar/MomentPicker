@@ -12,7 +12,7 @@
     "material"
   ],
   "license": "MIT",
-  "author": "Your Name",
+  "author": "Tushar Bhargava",
   "type": "module",
   "exports": {
     ".": {
